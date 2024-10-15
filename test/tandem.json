@@ -1,0 +1,25 @@
+{
+	"random_limit": 100000,
+	"pregen": false,
+	"a": 512345,
+	"c": 373621,
+	"m": 2147483648,
+	"seed" : 100,
+	"start_queue": "q1",
+	"start_time": 1.5,
+	"arrival_range": [1, 4],
+	"queues": {
+		"q1": {
+			"max_queue_size": 3,
+			"servers": 2,
+			"departure_range": [3, 4],
+			"out": { "q2": 1 }
+		},
+		"q2": {
+			"max_queue_size": 5,
+			"servers": 1,
+			"departure_range": [2, 3],
+			"out": { "": 1 }
+		}
+	}
+}
